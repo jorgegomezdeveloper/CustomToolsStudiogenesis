@@ -21,6 +21,7 @@
 		7C60006E2639AE15001CF9D4 /* ScrollViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */; };
 		7C6000722639B11E001CF9D4 /* CornerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000712639B11E001CF9D4 /* CornerTools.swift */; };
 		7C6000772639B1DF001CF9D4 /* BorderTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000762639B1DF001CF9D4 /* BorderTools.swift */; };
+		7C60007B2639B77C001CF9D4 /* PhoneTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60007A2639B77C001CF9D4 /* PhoneTools.swift */; };
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
@@ -74,6 +75,7 @@
 		7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTools.swift; sourceTree = "<group>"; };
 		7C6000712639B11E001CF9D4 /* CornerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerTools.swift; sourceTree = "<group>"; };
 		7C6000762639B1DF001CF9D4 /* BorderTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTools.swift; sourceTree = "<group>"; };
+		7C60007A2639B77C001CF9D4 /* PhoneTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTools.swift; sourceTree = "<group>"; };
 		7C7DA21C263971990073A65D /* CustomToolsStudiogenesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomToolsStudiogenesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomToolsStudiogenesis.h; sourceTree = "<group>"; };
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				7CDC9CC9263982B8009C9218 /* NavigationTools.swift */,
 				7CDC9CCE263982F6009C9218 /* NumberTools.swift */,
 				7CDC9CD12639832A009C9218 /* PermissionTools.swift */,
+				7C60007A2639B77C001CF9D4 /* PhoneTools.swift */,
 				7CDC9CD42639834A009C9218 /* QrTool.swift */,
 				7CDC9CD92639938F009C9218 /* RandomTools.swift */,
 				7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */,
@@ -326,6 +329,7 @@
 				7CDC9CC726398286009C9218 /* MapTools.swift in Sources */,
 				7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */,
 				7CDC9CFB263995C5009C9218 /* LoadingCustomStandard.swift in Sources */,
+				7C60007B2639B77C001CF9D4 /* PhoneTools.swift in Sources */,
 				7CDC9CB026397F11009C9218 /* GestureRecognizerTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
