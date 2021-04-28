@@ -6,6 +6,8 @@
 //  Copyright © 2021 Jorge GA-studiogenesis. All rights reserved.
 //
 
+import SwiftUI
+
 extension UIView {
 
     public func setBorderLikeTextField() {
