@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2701C02639BA2700DDE3F0 /* ShareTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2701BF2639BA2700DDE3F0 /* ShareTool.swift */; };
+		7C2701C32639BA8B00DDE3F0 /* FileDownloaderCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2701C22639BA8B00DDE3F0 /* FileDownloaderCustom.swift */; };
 		7C60001B26399FAD001CF9D4 /* TextFieldObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60001A26399FAD001CF9D4 /* TextFieldObservers.swift */; };
 		7C6000202639A093001CF9D4 /* SubStringsTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60001F2639A093001CF9D4 /* SubStringsTools.swift */; };
 		7C6000272639A173001CF9D4 /* KoyomiLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000262639A173001CF9D4 /* KoyomiLayout.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C2701BF2639BA2700DDE3F0 /* ShareTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTool.swift; sourceTree = "<group>"; };
+		7C2701C22639BA8B00DDE3F0 /* FileDownloaderCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloaderCustom.swift; sourceTree = "<group>"; };
 		7C60001A26399FAD001CF9D4 /* TextFieldObservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldObservers.swift; sourceTree = "<group>"; };
 		7C60001F2639A093001CF9D4 /* SubStringsTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringsTools.swift; sourceTree = "<group>"; };
 		7C6000262639A173001CF9D4 /* KoyomiLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoyomiLayout.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				7CDC9CAC26397EE7009C9218 /* DeviceTools.swift */,
 				7C60002E2639A1FD001CF9D4 /* DictionaryExtension.swift */,
 				7C60006A2639AD95001CF9D4 /* EmailTools.swift */,
+				7C2701C22639BA8B00DDE3F0 /* FileDownloaderCustom.swift */,
 				7CDC9CAF26397F11009C9218 /* GestureRecognizerTools.swift */,
 				7CDC9CB226397F49009C9218 /* HtmlToStringFormatter.swift */,
 				7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */,
@@ -186,6 +191,7 @@
 				7C60007A2639B77C001CF9D4 /* PhoneTools.swift */,
 				7CDC9CD42639834A009C9218 /* QrTool.swift */,
 				7CDC9CD92639938F009C9218 /* RandomTools.swift */,
+				7C2701BF2639BA2700DDE3F0 /* ShareTool.swift */,
 				7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */,
 				7CDC9CDC263993B3009C9218 /* SoundVibrationTools.swift */,
 				7CDC9CDF263993EA009C9218 /* StringTools.swift */,
@@ -292,6 +298,7 @@
 				7CDC9CE8263994BF009C9218 /* ApiServiceTool.swift in Sources */,
 				7C6000492639A610001CF9D4 /* UrlTools.swift in Sources */,
 				7C60002F2639A1FD001CF9D4 /* DictionaryExtension.swift in Sources */,
+				7C2701C02639BA2700DDE3F0 /* ShareTool.swift in Sources */,
 				7CDC9CD22639832A009C9218 /* PermissionTools.swift in Sources */,
 				7CDC9CA726397E8A009C9218 /* CellTools.swift in Sources */,
 				7C6000202639A093001CF9D4 /* SubStringsTools.swift in Sources */,
@@ -311,6 +318,7 @@
 				7CDC9CC02639817B009C9218 /* TableViewCellCustom.swift in Sources */,
 				7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */,
 				7CDC9CAD26397EE7009C9218 /* DeviceTools.swift in Sources */,
+				7C2701C32639BA8B00DDE3F0 /* FileDownloaderCustom.swift in Sources */,
 				7CDC9CA326397E55009C9218 /* AsyncImageLoaderTool.swift in Sources */,
 				7CDC9CD52639834A009C9218 /* QrTool.swift in Sources */,
 				7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */,
