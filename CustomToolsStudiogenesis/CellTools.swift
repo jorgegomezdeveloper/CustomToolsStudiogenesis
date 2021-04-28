@@ -27,22 +27,18 @@ public class CellTools {
     public func setCellCornerRadius(cell: UIView, indexPath: IndexPath, viewSeparator: UIView?, cornerRadius: CGFloat, dataCount: Int) {
     
         if indexPath.row == 0 {
-            //cell.roundSpecificsCorners(corners: [.topLeft, .topRight], radius: cornerRadius)
-            cell.round(corners: [.topLeft, .topRight], cornerRadius: Double(cornerRadius))
+            cell.roundSpecificsCorners(corners: [.topLeft, .topRight], radius: cornerRadius)
             viewSeparator?.isHidden = false
         } else if indexPath.row == dataCount-1 {
-            //cell.roundSpecificsCorners(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
-            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: Double(cornerRadius))
+            cell.roundSpecificsCorners(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
             viewSeparator?.isHidden = true
         } else {
-            //cell.roundSpecificsCorners(corners: [.bottomLeft, .bottomRight], radius: 0)
-            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 0)
+            cell.roundSpecificsCorners(corners: [.bottomLeft, .bottomRight], radius: 0)
             viewSeparator?.isHidden = false
         }
         
         if dataCount == 1 {
-            //cell.roundSpecificsCorners(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
-            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: Double(cornerRadius))
+            cell.roundSpecificsCorners(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
             viewSeparator?.isHidden = true
         }
     }

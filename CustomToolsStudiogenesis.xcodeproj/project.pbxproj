@@ -19,6 +19,8 @@
 		7C6000492639A610001CF9D4 /* UrlTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000482639A610001CF9D4 /* UrlTools.swift */; };
 		7C60006B2639AD95001CF9D4 /* EmailTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60006A2639AD95001CF9D4 /* EmailTools.swift */; };
 		7C60006E2639AE15001CF9D4 /* ScrollViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */; };
+		7C6000722639B11E001CF9D4 /* CornerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000712639B11E001CF9D4 /* CornerTools.swift */; };
+		7C6000772639B1DF001CF9D4 /* BorderTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000762639B1DF001CF9D4 /* BorderTools.swift */; };
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
@@ -70,6 +72,8 @@
 		7C6000482639A610001CF9D4 /* UrlTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlTools.swift; sourceTree = "<group>"; };
 		7C60006A2639AD95001CF9D4 /* EmailTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTools.swift; sourceTree = "<group>"; };
 		7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTools.swift; sourceTree = "<group>"; };
+		7C6000712639B11E001CF9D4 /* CornerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerTools.swift; sourceTree = "<group>"; };
+		7C6000762639B1DF001CF9D4 /* BorderTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTools.swift; sourceTree = "<group>"; };
 		7C7DA21C263971990073A65D /* CustomToolsStudiogenesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomToolsStudiogenesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomToolsStudiogenesis.h; sourceTree = "<group>"; };
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,9 +153,11 @@
 				7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */,
 				7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */,
 				7CDC9CA226397E54009C9218 /* AsyncImageLoaderTool.swift */,
+				7C6000762639B1DF001CF9D4 /* BorderTools.swift */,
 				7CDC9CFE26399601009C9218 /* CalendarKoyomiTool.swift */,
 				7CDC9CA626397E8A009C9218 /* CellTools.swift */,
 				7CDC9CA926397EB1009C9218 /* ColorTools.swift */,
+				7C6000712639B11E001CF9D4 /* CornerTools.swift */,
 				7C6000342639A279001CF9D4 /* DateExtension.swift */,
 				7C6000312639A24C001CF9D4 /* DateModel.swift */,
 				7CDC9CEE26399545009C9218 /* DateTools.swift */,
@@ -296,6 +302,7 @@
 				7CDC9CDA2639938F009C9218 /* RandomTools.swift in Sources */,
 				7CDC9CDD263993B3009C9218 /* SoundVibrationTools.swift in Sources */,
 				7C6000322639A24C001CF9D4 /* DateModel.swift in Sources */,
+				7C6000772639B1DF001CF9D4 /* BorderTools.swift in Sources */,
 				7CDC9CEF26399545009C9218 /* DateTools.swift in Sources */,
 				7CDC9D0626399672009C9218 /* UIColorExtension.swift in Sources */,
 				7CDC9CC02639817B009C9218 /* TableViewCellCustom.swift in Sources */,
@@ -310,6 +317,7 @@
 				7CDC9CE42639943B009C9218 /* ToastMessageTool.swift in Sources */,
 				7CDC9CF7263995A8009C9218 /* LoadingCustomPulse.swift in Sources */,
 				7C60002A2639A1C0001CF9D4 /* KoyomiCell.swift in Sources */,
+				7C6000722639B11E001CF9D4 /* CornerTools.swift in Sources */,
 				7CDC9CB626397F79009C9218 /* ImageAlertTool.swift in Sources */,
 				7CDC9CB326397F49009C9218 /* HtmlToStringFormatter.swift in Sources */,
 				7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */,
