@@ -22,6 +22,7 @@
 		7CDC9CB626397F79009C9218 /* ImageAlertTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */; };
 		7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CB826397F9C009C9218 /* ImageTools.swift */; };
 		7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */; };
+		7CDC9CC02639817B009C9218 /* TableViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlertTool.swift; sourceTree = "<group>"; };
 		7CDC9CB826397F9C009C9218 /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
 		7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionTool.swift; sourceTree = "<group>"; };
+		7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */,
 				7CDC9CB826397F9C009C9218 /* ImageTools.swift */,
 				7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */,
+				7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */,
 			);
 			path = CustomToolsStudiogenesis;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				7CDC9CA726397E8A009C9218 /* CellTools.swift in Sources */,
 				7CDC9CAA26397EB1009C9218 /* ColorTools.swift in Sources */,
 				7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */,
+				7CDC9CC02639817B009C9218 /* TableViewCellCustom.swift in Sources */,
 				7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */,
 				7CDC9CAD26397EE7009C9218 /* DeviceTools.swift in Sources */,
 				7CDC9CA326397E55009C9218 /* AsyncImageLoaderTool.swift in Sources */,
