@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-/*
+
 public var isCalendarKoyomiToolOpened = false
 
 @objc public protocol CalendarKoyomiToolProtocol: class {
@@ -730,4 +730,3 @@ extension CalendarKoyomiTool: KoyomiDelegate {
 
 }
 
-*/
