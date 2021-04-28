@@ -17,6 +17,8 @@
 		7C60003F2639A545001CF9D4 /* TextFieldContainerValuesTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60003E2639A545001CF9D4 /* TextFieldContainerValuesTool.swift */; };
 		7C6000442639A5B3001CF9D4 /* TextFieldTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000432639A5B3001CF9D4 /* TextFieldTools.swift */; };
 		7C6000492639A610001CF9D4 /* UrlTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000482639A610001CF9D4 /* UrlTools.swift */; };
+		7C60006B2639AD95001CF9D4 /* EmailTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60006A2639AD95001CF9D4 /* EmailTools.swift */; };
+		7C60006E2639AE15001CF9D4 /* ScrollViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */; };
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
@@ -66,6 +68,8 @@
 		7C60003E2639A545001CF9D4 /* TextFieldContainerValuesTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerValuesTool.swift; sourceTree = "<group>"; };
 		7C6000432639A5B3001CF9D4 /* TextFieldTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTools.swift; sourceTree = "<group>"; };
 		7C6000482639A610001CF9D4 /* UrlTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlTools.swift; sourceTree = "<group>"; };
+		7C60006A2639AD95001CF9D4 /* EmailTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTools.swift; sourceTree = "<group>"; };
+		7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTools.swift; sourceTree = "<group>"; };
 		7C7DA21C263971990073A65D /* CustomToolsStudiogenesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomToolsStudiogenesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomToolsStudiogenesis.h; sourceTree = "<group>"; };
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				7CDC9CEE26399545009C9218 /* DateTools.swift */,
 				7CDC9CAC26397EE7009C9218 /* DeviceTools.swift */,
 				7C60002E2639A1FD001CF9D4 /* DictionaryExtension.swift */,
+				7C60006A2639AD95001CF9D4 /* EmailTools.swift */,
 				7CDC9CAF26397F11009C9218 /* GestureRecognizerTools.swift */,
 				7CDC9CB226397F49009C9218 /* HtmlToStringFormatter.swift */,
 				7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */,
@@ -172,6 +177,7 @@
 				7CDC9CD12639832A009C9218 /* PermissionTools.swift */,
 				7CDC9CD42639834A009C9218 /* QrTool.swift */,
 				7CDC9CD92639938F009C9218 /* RandomTools.swift */,
+				7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */,
 				7CDC9CDC263993B3009C9218 /* SoundVibrationTools.swift */,
 				7CDC9CDF263993EA009C9218 /* StringTools.swift */,
 				7C60001F2639A093001CF9D4 /* SubStringsTools.swift */,
@@ -282,6 +288,7 @@
 				7C6000202639A093001CF9D4 /* SubStringsTools.swift in Sources */,
 				7CDC9CF326399586009C9218 /* LoadingCustom.swift in Sources */,
 				7CDC9CE0263993EA009C9218 /* StringTools.swift in Sources */,
+				7C60006B2639AD95001CF9D4 /* EmailTools.swift in Sources */,
 				7CDC9CAA26397EB1009C9218 /* ColorTools.swift in Sources */,
 				7CDC9CC42639824D009C9218 /* LocationTools.swift in Sources */,
 				7CDC9CCA263982B8009C9218 /* NavigationTools.swift in Sources */,
@@ -297,6 +304,7 @@
 				7CDC9CA326397E55009C9218 /* AsyncImageLoaderTool.swift in Sources */,
 				7CDC9CD52639834A009C9218 /* QrTool.swift in Sources */,
 				7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */,
+				7C60006E2639AE15001CF9D4 /* ScrollViewTools.swift in Sources */,
 				7CDC9CCF263982F6009C9218 /* NumberTools.swift in Sources */,
 				7CDC9D0A26399694009C9218 /* UIViewExtension.swift in Sources */,
 				7CDC9CE42639943B009C9218 /* ToastMessageTool.swift in Sources */,
