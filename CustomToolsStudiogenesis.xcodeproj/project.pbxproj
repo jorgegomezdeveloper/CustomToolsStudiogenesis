@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C7DA21C263971990073A65D /* CustomToolsStudiogenesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomToolsStudiogenesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomToolsStudiogenesis.h; sourceTree = "<group>"; };
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C7DA2292639734B0073A65D /* AddressTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */,
 				7C7DA220263971990073A65D /* Info.plist */,
+				7C7DA2292639734B0073A65D /* AddressTools.swift */,
 			);
 			path = CustomToolsStudiogenesis;
 			sourceTree = "<group>";
@@ -94,6 +97,7 @@
 				TargetAttributes = {
 					7C7DA21B263971990073A65D = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +266,7 @@
 		7C7DA225263971990073A65D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -278,6 +284,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +293,7 @@
 		7C7DA226263971990073A65D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
