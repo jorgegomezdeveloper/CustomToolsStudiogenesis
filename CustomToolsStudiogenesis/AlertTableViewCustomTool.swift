@@ -536,22 +536,18 @@ extension AlertTableViewCustomTool: UITableViewDataSource {
         )
                 
         if indexPath.row == 0 {
-            //cell.roundSpecificsCornersCells(corners: [.topLeft, .topRight], radius: 6)
-            cell.round(corners: [.topLeft, .topRight], cornerRadius: 6)
+            cell.roundSpecificsCornersCells(corners: [.topLeft, .topRight], radius: 6)
             cell.separatorCell.isHidden = false
         } else if data?.count == indexPath.row+1 {
-            //cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 6)
-            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 6)
+            cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 6)
             cell.separatorCell.isHidden = true
         } else {
-            //cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 0)
-            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 0)
+            cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 0)
             cell.separatorCell.isHidden = false
         }
         
         if data?.count ?? 0 == 1 {
-            //cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 6)
-            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 6)
+            cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 6)
             cell.separatorCell.isHidden = true
         }
         
