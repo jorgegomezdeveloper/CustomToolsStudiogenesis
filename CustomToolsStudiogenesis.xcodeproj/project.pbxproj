@@ -23,6 +23,12 @@
 		7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CB826397F9C009C9218 /* ImageTools.swift */; };
 		7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */; };
 		7CDC9CC02639817B009C9218 /* TableViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */; };
+		7CDC9CC42639824D009C9218 /* LocationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CC32639824D009C9218 /* LocationTools.swift */; };
+		7CDC9CC726398286009C9218 /* MapTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CC626398286009C9218 /* MapTools.swift */; };
+		7CDC9CCA263982B8009C9218 /* NavigationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CC9263982B8009C9218 /* NavigationTools.swift */; };
+		7CDC9CCF263982F6009C9218 /* NumberTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CCE263982F6009C9218 /* NumberTools.swift */; };
+		7CDC9CD22639832A009C9218 /* PermissionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CD12639832A009C9218 /* PermissionTools.swift */; };
+		7CDC9CD52639834A009C9218 /* QrTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CD42639834A009C9218 /* QrTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		7CDC9CB826397F9C009C9218 /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
 		7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionTool.swift; sourceTree = "<group>"; };
 		7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCustom.swift; sourceTree = "<group>"; };
+		7CDC9CC32639824D009C9218 /* LocationTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTools.swift; sourceTree = "<group>"; };
+		7CDC9CC626398286009C9218 /* MapTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTools.swift; sourceTree = "<group>"; };
+		7CDC9CC9263982B8009C9218 /* NavigationTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTools.swift; sourceTree = "<group>"; };
+		7CDC9CCE263982F6009C9218 /* NumberTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTools.swift; sourceTree = "<group>"; };
+		7CDC9CD12639832A009C9218 /* PermissionTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTools.swift; sourceTree = "<group>"; };
+		7CDC9CD42639834A009C9218 /* QrTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,12 @@
 				7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */,
 				7CDC9CB826397F9C009C9218 /* ImageTools.swift */,
 				7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */,
+				7CDC9CC32639824D009C9218 /* LocationTools.swift */,
+				7CDC9CC626398286009C9218 /* MapTools.swift */,
+				7CDC9CC9263982B8009C9218 /* NavigationTools.swift */,
+				7CDC9CCE263982F6009C9218 /* NumberTools.swift */,
+				7CDC9CD12639832A009C9218 /* PermissionTools.swift */,
+				7CDC9CD42639834A009C9218 /* QrTool.swift */,
 				7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */,
 			);
 			path = CustomToolsStudiogenesis;
@@ -178,17 +196,23 @@
 			files = (
 				7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */,
 				7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */,
+				7CDC9CD22639832A009C9218 /* PermissionTools.swift in Sources */,
 				7CDC9CA726397E8A009C9218 /* CellTools.swift in Sources */,
 				7CDC9CAA26397EB1009C9218 /* ColorTools.swift in Sources */,
+				7CDC9CC42639824D009C9218 /* LocationTools.swift in Sources */,
+				7CDC9CCA263982B8009C9218 /* NavigationTools.swift in Sources */,
 				7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */,
 				7CDC9CC02639817B009C9218 /* TableViewCellCustom.swift in Sources */,
 				7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */,
 				7CDC9CAD26397EE7009C9218 /* DeviceTools.swift in Sources */,
 				7CDC9CA326397E55009C9218 /* AsyncImageLoaderTool.swift in Sources */,
+				7CDC9CD52639834A009C9218 /* QrTool.swift in Sources */,
 				7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */,
+				7CDC9CCF263982F6009C9218 /* NumberTools.swift in Sources */,
 				7CDC9CB626397F79009C9218 /* ImageAlertTool.swift in Sources */,
 				7CDC9CB326397F49009C9218 /* HtmlToStringFormatter.swift in Sources */,
 				7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */,
+				7CDC9CC726398286009C9218 /* MapTools.swift in Sources */,
 				7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */,
 				7CDC9CB026397F11009C9218 /* GestureRecognizerTools.swift in Sources */,
 			);
