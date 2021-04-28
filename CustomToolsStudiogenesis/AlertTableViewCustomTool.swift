@@ -1,5 +1,5 @@
 //
-//  AlertCustomTool.swift
+//  AlertTableViewCustomTool.swift
 //  CustomToolsStudiogenesis
 //
 //  Created by Jorge GA-studiogenesis on 28/04/2021.
@@ -8,9 +8,14 @@
 
 import SwiftUI
 
-public var isAlertCustomToolOpened = false
 
-public class AlertCustomTool {
+public var isAlertTableViewCustomToolOpen = false
+
+public protocol AlertTableViewCustomToolProtocol: class {
+    func selectedItem(value: Any)
+}
+
+public class AlertTableViewCustomTool: UIViewController {
     
     public enum ButtonsFormatType: String {
         case stickedDown
@@ -27,25 +32,29 @@ public class AlertCustomTool {
     var viewSpace: UIView!
     var stackViewButtons: UIStackView!
     var buttonAccept: UIButton!
-    var buttonCancel: UIButton!
-    var buttonOther: UIButton!
     var buttonMainContainer: UIButton!
     var buttonCloseTop: UIButton!
+    var tableView: UITableView!
     
     // MARK: PARAMETERS
+    let cellIdentifier = "AlertTableViewCustomToolCell"
     var acceptAction: ( ()->Void )?
-    var cancelAction: ( ()->Void )?
-    var otherAction: ( ()->Void )?
+    var data: [Any]?
+    weak var delegateProtocol: AlertTableViewCustomToolProtocol?
+    var cellHeight: CGFloat = 50
+    var tableViewHeight: CGFloat = 150
+    
+    var cellBackgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    var cellTextColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    var cellSeparatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     
     // MARK: START METHODS
-    public init() {
-    }
-    
-    public func show(title: String, message: String, customImage: UIImage?, imageHeight: CGFloat = 80, imageWidth: CGFloat = 80, onlyOneButton: Bool, activeExtraButton: Bool = false, typeFormatButtons: ButtonsFormatType = .withConstraints, topCloseButtonImage: UIImage? = nil) {
+    public func show(delegate: AlertTableViewCustomToolProtocol, data: [Any], title: String?, message: String?, customImage: UIImage?, imageHeight: CGFloat = 80, imageWidth: CGFloat = 80, typeFormatViews: ButtonsFormatType = .stickedDown, topCloseButtonImage: UIImage? = nil, tableViewHeightValue: CGFloat = 150, cellHeightValue: CGFloat = 50, isActiveAcceptButton: Bool = false, addWhiteSpaceBottomMessage: Bool = false, cellBackgroundColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), cellTextColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), cellSeparatorColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)) {
         
-        guard !isAlertCustomToolOpened else { return }
-        
-        isAlertCustomToolOpened = true
+        // Initial control to not duplicate alerts
+        guard !isAlertTableViewCustomToolOpen else {
+            return
+        }
         
         // Parameters
         let keyWindow = UIApplication.shared.connectedScenes
@@ -56,6 +65,20 @@ public class AlertCustomTool {
                 .filter({$0.isKeyWindow}).first
         
         let window = keyWindow
+
+        isAlertTableViewCustomToolOpen = true
+        self.delegateProtocol = delegate
+        self.data = data
+        
+        self.cellBackgroundColor = cellBackgroundColor
+        self.cellTextColor = cellTextColor
+        self.cellSeparatorColor = cellSeparatorColor
+        
+        if tableViewHeightValue > ((window?.layer.bounds.height)! / 2) {
+            self.tableViewHeight = ((window?.layer.bounds.height)! / 2)
+        } else {
+            self.tableViewHeight = tableViewHeightValue
+        }
         
         // View Container Main
         mainViewContainer = UIView()
@@ -83,7 +106,13 @@ public class AlertCustomTool {
         stackView.axis = NSLayoutConstraint.Axis.vertical
         stackView.distribution = UIStackView.Distribution.fill
         stackView.alignment = UIStackView.Alignment.center
-        stackView.spacing = 20
+        
+        if title == nil && message == nil && customImage == nil {
+            stackView.spacing = 0
+        } else {
+            stackView.spacing = 20
+        }
+        
         stackView.clipsToBounds = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -115,7 +144,7 @@ public class AlertCustomTool {
         
         // Label Title
         textLabelTitle = UILabel()
-        textLabelTitle.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        textLabelTitle.font = UIFont.systemFont(ofSize: 24, weight: .medium)
         textLabelTitle.text = title
         textLabelTitle.textAlignment = .center
         textLabelTitle.numberOfLines = 2
@@ -124,7 +153,7 @@ public class AlertCustomTool {
         
         // Label
         textLabel = UILabel()
-        textLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        textLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         textLabel.text = message
         textLabel.textAlignment = .left
         textLabel.numberOfLines = 0
@@ -133,56 +162,60 @@ public class AlertCustomTool {
         textLabel.minimumScaleFactor = 0.5
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        // View white space
-        viewSpace = UIView()
-        viewSpace.clipsToBounds = true
-        viewSpace.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-        viewSpace.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Stack View Buttons
-        stackViewButtons = UIStackView()
-        stackViewButtons.axis = NSLayoutConstraint.Axis.horizontal
-        stackViewButtons.distribution = UIStackView.Distribution.fillEqually
-        stackViewButtons.alignment = UIStackView.Alignment.fill
-        stackViewButtons.spacing = 16
-        stackViewButtons.clipsToBounds = true
-        stackViewButtons.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Button Accept
-        buttonAccept = UIButton()
-        buttonAccept.backgroundColor = #colorLiteral(red: 0.262745098, green: 0.8039215686, blue: 0.368627451, alpha: 1)
-        buttonAccept.setTitle("Accept", for: .normal)
-        buttonAccept.layer.cornerRadius = 4
-        buttonAccept.addTarget(self, action: #selector(buttonAcceptAction), for: .touchUpInside)
-        
-        buttonCancel = UIButton()
-        buttonCancel.backgroundColor = #colorLiteral(red: 0.8352941176, green: 0, blue: 0.3411764706, alpha: 1)
-        buttonCancel.setTitle("Cancel", for: .normal)
-        buttonCancel.layer.cornerRadius = 4
-        buttonCancel.addTarget(self, action: #selector(buttonCancelAction), for: .touchUpInside)
-        
-        // Add items to stackView
-        if !onlyOneButton {
-            stackViewButtons.addArrangedSubview(buttonCancel)
-            
-            if activeExtraButton {
-                buttonOther = UIButton()
-                buttonOther.backgroundColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
-                buttonOther.setTitle("Other", for: .normal)
-                buttonOther.layer.cornerRadius = 4
-                buttonOther.addTarget(self, action: #selector(buttonOtherAction), for: .touchUpInside)
-                
-                stackViewButtons.addArrangedSubview(buttonOther)
-            }
+        if addWhiteSpaceBottomMessage {
+            // View white space
+            viewSpace = UIView()
+            viewSpace.clipsToBounds = true
+            viewSpace.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+            viewSpace.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        stackViewButtons.addArrangedSubview(buttonAccept)
+        if isActiveAcceptButton {
+            // Stack View Buttons
+            stackViewButtons = UIStackView()
+            stackViewButtons.axis = NSLayoutConstraint.Axis.horizontal
+            stackViewButtons.distribution = UIStackView.Distribution.fillEqually
+            stackViewButtons.alignment = UIStackView.Alignment.fill
+            stackViewButtons.spacing = 16
+            stackViewButtons.clipsToBounds = true
+            stackViewButtons.translatesAutoresizingMaskIntoConstraints = false
+            
+            // Button Accept
+            buttonAccept = UIButton()
+            buttonAccept.backgroundColor = #colorLiteral(red: 0.262745098, green: 0.8039215686, blue: 0.368627451, alpha: 1)
+            buttonAccept.setTitle("Accept", for: .normal)
+            buttonAccept.layer.cornerRadius = 4
+            buttonAccept.addTarget(self, action: #selector(buttonAcceptAction), for: .touchUpInside)
+        }
+        
+        // Table View
+        tableView = UITableView(frame: .zero)
+        tableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UIView.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.separatorStyle = .none
+//        tableView.clipsToBounds = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add items to stackView
+        if isActiveAcceptButton {
+            stackViewButtons.addArrangedSubview(buttonAccept)
+        }
         
         stackView.addArrangedSubview(imageIcon)
         stackView.addArrangedSubview(textLabelTitle)
         stackView.addArrangedSubview(textLabel)
-        stackView.addArrangedSubview(viewSpace)
-        stackView.addArrangedSubview(stackViewButtons)
+        
+        if addWhiteSpaceBottomMessage {
+            stackView.addArrangedSubview(viewSpace)
+        }
+        
+        stackView.addArrangedSubview(tableView)
+        
+        if isActiveAcceptButton {
+            stackView.addArrangedSubview(stackViewButtons)
+        }
         
         // Add items to containers
         viewContainer.addSubview(stackView)
@@ -208,8 +241,8 @@ public class AlertCustomTool {
         buttonMainContainer.trailingAnchor.constraint(equalTo: mainViewContainer.trailingAnchor).isActive = true
         
         if topCloseButtonImage != nil {
-            buttonCloseTop.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 0).isActive = true
-            buttonCloseTop.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor, constant: 0).isActive = true
+            buttonCloseTop.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 5).isActive = true
+            buttonCloseTop.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor, constant: -5).isActive = true
         }
         
         viewContainer.topAnchor.constraint(greaterThanOrEqualTo: mainViewContainer.topAnchor, constant: 50).isActive = true
@@ -225,72 +258,73 @@ public class AlertCustomTool {
         textLabelTitle.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 30).isActive = true
         textLabelTitle.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -30).isActive = true
         
-        viewSpace.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
-        stackViewButtons.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        switch typeFormatButtons {
-        case .stickedDown:
-            stackViewButtons.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
-            stackViewButtons.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
-            stackView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: 0).isActive = true
-            
-            stackViewButtons.spacing = 0
-            buttonAccept.layer.cornerRadius = 0
-            buttonCancel.layer.cornerRadius = 0
-            if activeExtraButton {
-                buttonOther.layer.cornerRadius = 0
-            }
-            break
-        case .withConstraints:
-            stackViewButtons.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 30).isActive = true
-            stackViewButtons.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -30).isActive = true
-            stackView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -30).isActive = true
-            break
+        if addWhiteSpaceBottomMessage {
+            viewSpace.heightAnchor.constraint(equalToConstant: 1).isActive = true
         }
         
-        stackView.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 50).isActive = true
+        tableView.heightAnchor.constraint(equalToConstant: tableViewHeight).isActive = true
+        
+        if isActiveAcceptButton {
+            stackViewButtons.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+        
+        switch typeFormatViews {
+        case .stickedDown:
+            
+            tableView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
+            tableView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
+            
+            if isActiveAcceptButton {
+                stackViewButtons.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 0).isActive = true
+                stackViewButtons.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 0).isActive = true
+                
+                stackViewButtons.spacing = 0
+                buttonAccept.layer.cornerRadius = 0
+            }
+            
+            if title == nil && message == nil && customImage == nil {
+                stackView.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 0).isActive = true
+            } else {
+                stackView.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 50).isActive = true
+            }
+            stackView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: 0).isActive = true
+            
+            break
+        case .withConstraints:
+            
+            tableView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 30).isActive = true
+            tableView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -30).isActive = true
+            
+            if isActiveAcceptButton {
+                stackViewButtons.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 30).isActive = true
+                stackViewButtons.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -30).isActive = true
+            }
+            
+            stackView.topAnchor.constraint(equalTo: viewContainer.topAnchor, constant: 50).isActive = true
+            stackView.bottomAnchor.constraint(equalTo: viewContainer.bottomAnchor, constant: -30).isActive = true
+            
+            break
+        }
+
         stackView.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 0).isActive = true
         stackView.trailingAnchor.constraint(equalTo: viewContainer.trailingAnchor, constant: 0).isActive = true
     }
-    
-    
     
 }
 
 
 // MARK: BUTTON METHODS
-extension AlertCustomTool {
+extension AlertTableViewCustomTool {
     
     @objc func buttonMainContainerAction() {
         print("AlertCustomTool: buttonMainContainerAction")
-        isAlertCustomToolOpened = false
-        mainViewContainer.removeFromSuperview()
+        closeViewActions()
     }
     
     @objc func buttonAcceptAction() {
         print("AlertCustomTool: buttonAcceptAction")
-        isAlertCustomToolOpened = false
-        mainViewContainer.removeFromSuperview()
+        closeViewActions()
         if let action = self.acceptAction {
-            action()
-        }
-    }
-    
-    @objc func buttonCancelAction() {
-        print("AlertCustomTool: buttonCancelAction")
-        isAlertCustomToolOpened = false
-        mainViewContainer.removeFromSuperview()
-        if let action = self.cancelAction {
-            action()
-        }
-    }
-    
-    @objc func buttonOtherAction() {
-        print("AlertCustomTool: buttonOtherAction")
-        isAlertCustomToolOpened = false
-        mainViewContainer.removeFromSuperview()
-        if let action = self.otherAction {
             action()
         }
     }
@@ -298,18 +332,17 @@ extension AlertCustomTool {
     public func addAcceptAction(_ action: @escaping ()->Void) {
         self.acceptAction = action
     }
-    public func addCancelAction(_ action: @escaping ()->Void) {
-        self.cancelAction = action
-    }
-    public func addOtherAction(_ action: @escaping ()->Void) {
-        self.otherAction = action
+    
+    private func closeViewActions() {
+        isAlertTableViewCustomToolOpen = false
+        mainViewContainer.removeFromSuperview()
     }
     
 }
 
 
 // MARK: CUSTOMIZE VIEW METHODS
-extension AlertCustomTool {
+extension AlertTableViewCustomTool {
     
     // BACKGROUND
     public func setBackgroundColor(color: UIColor) {
@@ -397,6 +430,17 @@ extension AlertCustomTool {
         textLabel.isHidden = isHidden
     }
     
+    // TABLE VIEW
+    public func setTableViewBackgorund(color: UIColor) {
+        tableView.backgroundColor = color
+    }
+    public func setTableViewSeparator(style: UITableViewCell.SeparatorStyle) {
+        tableView.separatorStyle = style
+    }
+    public func setTableViewSeparator(color: UIColor) {
+        tableView.separatorColor = color
+    }
+    
     // BUTTONS
     public func setButtonAcceptBackground(color: UIColor) {
         buttonAccept.backgroundColor = color
@@ -414,47 +458,14 @@ extension AlertCustomTool {
         buttonAccept.setAttributedTitle(attributedText, for: .normal)
     }
     
-    public func setButtonCancelBackground(color: UIColor) {
-        buttonCancel.backgroundColor = color
-    }
-    public func setButtonCancelCorner(value: CGFloat) {
-        buttonCancel.layer.cornerRadius = value
-    }
-    public func setButtonCancelTextColor(color: UIColor) {
-        buttonCancel.setTitleColor(color, for: .normal)
-    }
-    public func setButtonCancelTitle(text: String) {
-        buttonCancel.setTitle(text, for: .normal)
-    }
-    public func setButtonCancelAttributedText(attributedText: NSAttributedString) {
-        buttonCancel.setAttributedTitle(attributedText, for: .normal)
-    }
-    
-    public func setButtonOtherBackground(color: UIColor) {
-        buttonOther.backgroundColor = color
-    }
-    public func setButtonOtherCorner(value: CGFloat) {
-        buttonOther.layer.cornerRadius = value
-    }
-    public func setButtonOtherTextColor(color: UIColor) {
-        buttonOther.setTitleColor(color, for: .normal)
-    }
-    public func setButtonOtherTitle(text: String) {
-        buttonOther.setTitle(text, for: .normal)
-    }
-    public func setButtonOtherAttributedText(attributedText: NSAttributedString) {
-        buttonOther.setAttributedTitle(attributedText, for: .normal)
-    }
-    
 }
 
 // MARK: ANIMATIONS
-extension AlertCustomTool {
+extension AlertTableViewCustomTool {
     
     public enum AnimationType: String {
         case disolveCenter
         case scaleCenter
-        case fromBottom
     }
     
     public func setAnimationView(type: AnimationType, duration: TimeInterval = 0.2, _ action: @escaping ()->Void) {
@@ -497,27 +508,66 @@ extension AlertCustomTool {
             
             break
             
-        case .fromBottom:
-            
-            viewContainer.alpha = 0
-            viewContainer.transform = CGAffineTransform(translationX: 0, y: 100)
-            self.mainViewContainer.layoutIfNeeded()
-            
-            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 3, options: [.curveEaseOut], animations: {
-                self.viewContainer.alpha = 1
-                self.viewContainer.transform = CGAffineTransform(translationX: 0, y: 0)
-                self.mainViewContainer.layoutIfNeeded()
-            }, completion: { _ in
-                completionAction = action
-                if let actions = completionAction {
-                    actions()
-                }
-            })
-            
-            break
         }
-        
     }
     
 }
+
+// MARK: TABLE VIEW METHODS
+extension AlertTableViewCustomTool: UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeight
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data?.count ?? 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCellCustom
+        
+        cell.loadCustomCell(
+            backgroundColor: cellBackgroundColor,
+            textColor: cellTextColor,
+            separatorColor: cellSeparatorColor,
+            textString: "\(data?[indexPath.row] ?? "?")"
+        )
+                
+        if indexPath.row == 0 {
+            //cell.roundSpecificsCornersCells(corners: [.topLeft, .topRight], radius: 6)
+            cell.round(corners: [.topLeft, .topRight], cornerRadius: 6)
+            cell.separatorCell.isHidden = false
+        } else if data?.count == indexPath.row+1 {
+            //cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 6)
+            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 6)
+            cell.separatorCell.isHidden = true
+        } else {
+            //cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 0)
+            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 0)
+            cell.separatorCell.isHidden = false
+        }
+        
+        if data?.count ?? 0 == 1 {
+            //cell.roundSpecificsCornersCells(corners: [.bottomLeft, .bottomRight], radius: 6)
+            cell.round(corners: [.bottomLeft, .bottomRight], cornerRadius: 6)
+            cell.separatorCell.isHidden = true
+        }
+        
+        return cell
+    }
+}
+
+extension AlertTableViewCustomTool: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Item selected: \(indexPath.row+1)")
+        delegateProtocol?.selectedItem(value: data?[indexPath.row] as Any)
+        closeViewActions()
+    }
+}
+
+
+
 

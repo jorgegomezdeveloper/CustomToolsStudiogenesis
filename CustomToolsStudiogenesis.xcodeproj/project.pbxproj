@@ -10,6 +10,18 @@
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
+		7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */; };
+		7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */; };
+		7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */; };
+		7CDC9CA326397E55009C9218 /* AsyncImageLoaderTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CA226397E54009C9218 /* AsyncImageLoaderTool.swift */; };
+		7CDC9CA726397E8A009C9218 /* CellTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CA626397E8A009C9218 /* CellTools.swift */; };
+		7CDC9CAA26397EB1009C9218 /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CA926397EB1009C9218 /* ColorTools.swift */; };
+		7CDC9CAD26397EE7009C9218 /* DeviceTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CAC26397EE7009C9218 /* DeviceTools.swift */; };
+		7CDC9CB026397F11009C9218 /* GestureRecognizerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CAF26397F11009C9218 /* GestureRecognizerTools.swift */; };
+		7CDC9CB326397F49009C9218 /* HtmlToStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CB226397F49009C9218 /* HtmlToStringFormatter.swift */; };
+		7CDC9CB626397F79009C9218 /* ImageAlertTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */; };
+		7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CB826397F9C009C9218 /* ImageTools.swift */; };
+		7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +30,18 @@
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C7DA2292639734B0073A65D /* AddressTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTools.swift; sourceTree = "<group>"; };
 		7C7DA22D263978200073A65D /* AlertCustomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomTool.swift; sourceTree = "<group>"; };
+		7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNativeTools.swift; sourceTree = "<group>"; };
+		7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsCustom.swift; sourceTree = "<group>"; };
+		7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCustomTool.swift; sourceTree = "<group>"; };
+		7CDC9CA226397E54009C9218 /* AsyncImageLoaderTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoaderTool.swift; sourceTree = "<group>"; };
+		7CDC9CA626397E8A009C9218 /* CellTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTools.swift; sourceTree = "<group>"; };
+		7CDC9CA926397EB1009C9218 /* ColorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTools.swift; sourceTree = "<group>"; };
+		7CDC9CAC26397EE7009C9218 /* DeviceTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTools.swift; sourceTree = "<group>"; };
+		7CDC9CAF26397F11009C9218 /* GestureRecognizerTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerTools.swift; sourceTree = "<group>"; };
+		7CDC9CB226397F49009C9218 /* HtmlToStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlToStringFormatter.swift; sourceTree = "<group>"; };
+		7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlertTool.swift; sourceTree = "<group>"; };
+		7CDC9CB826397F9C009C9218 /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
+		7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,18 @@
 				7C7DA220263971990073A65D /* Info.plist */,
 				7C7DA2292639734B0073A65D /* AddressTools.swift */,
 				7C7DA22D263978200073A65D /* AlertCustomTool.swift */,
+				7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */,
+				7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */,
+				7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */,
+				7CDC9CA226397E54009C9218 /* AsyncImageLoaderTool.swift */,
+				7CDC9CA626397E8A009C9218 /* CellTools.swift */,
+				7CDC9CA926397EB1009C9218 /* ColorTools.swift */,
+				7CDC9CAC26397EE7009C9218 /* DeviceTools.swift */,
+				7CDC9CAF26397F11009C9218 /* GestureRecognizerTools.swift */,
+				7CDC9CB226397F49009C9218 /* HtmlToStringFormatter.swift */,
+				7CDC9CB526397F79009C9218 /* ImageAlertTool.swift */,
+				7CDC9CB826397F9C009C9218 /* ImageTools.swift */,
+				7CDC9CBB26397FE7009C9218 /* InternetConnectionTool.swift */,
 			);
 			path = CustomToolsStudiogenesis;
 			sourceTree = "<group>";
@@ -138,7 +174,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */,
+				7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */,
+				7CDC9CA726397E8A009C9218 /* CellTools.swift in Sources */,
+				7CDC9CAA26397EB1009C9218 /* ColorTools.swift in Sources */,
+				7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */,
 				7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */,
+				7CDC9CAD26397EE7009C9218 /* DeviceTools.swift in Sources */,
+				7CDC9CA326397E55009C9218 /* AsyncImageLoaderTool.swift in Sources */,
+				7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */,
+				7CDC9CB626397F79009C9218 /* ImageAlertTool.swift in Sources */,
+				7CDC9CB326397F49009C9218 /* HtmlToStringFormatter.swift in Sources */,
+				7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */,
+				7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */,
+				7CDC9CB026397F11009C9218 /* GestureRecognizerTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
