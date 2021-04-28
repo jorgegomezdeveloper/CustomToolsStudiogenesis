@@ -251,10 +251,9 @@ public class DateTools {
         let minutes = getStringDateFromString(date: date, dateFormatIn: dateFormat, dateFormatOut: .justMinutes)
         let seconds = getStringDateFromString(date: date, dateFormatIn: dateFormat, dateFormatOut: .justSeconds)
         
-        /*
         guard hour.isNumeric && minutes.isNumeric && seconds.isNumeric else {
             return totalSeconds
-        }*/
+        }
         
         let secondsFromHour = (Int(hour)! * 60) * 60
         let secondsFromMinutes = (Int(hour)! * 60)

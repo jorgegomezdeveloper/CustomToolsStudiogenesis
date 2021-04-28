@@ -49,7 +49,7 @@ public class NumberTools {
     
     public func passValueToInt(value: Any) -> Int {
         
-        var result = 0
+        let result = 0
         /*
         if let value: String = value as? String {
             if value.isNumeric {
