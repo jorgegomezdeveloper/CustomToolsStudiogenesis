@@ -50,7 +50,7 @@ public class NumberTools {
     public func passValueToInt(value: Any) -> Int {
         
         var result = 0
-        
+        /*
         if let value: String = value as? String {
             if value.isNumeric {
                 result = Int(value) ?? 0
@@ -59,7 +59,7 @@ public class NumberTools {
             result = value
         } else if let value: Double = value as? Double {
             result = Int(value)
-        }
+        }*/
         
         return result
     }
@@ -172,9 +172,9 @@ extension NumberTools {
         case Float
         case Double
     }
-    
+    /*
     public func getNumberFromJsonKey(typeResult: TypeResult, jsonObject: [String: AnyObject], keyName: String) -> Any {
-        
+        /*
         switch typeResult {
         case .Int:
             return getCustomNumber(typeResult: .Int, type: Int.self, jsonObject: jsonObject, keyName: keyName)
@@ -182,9 +182,9 @@ extension NumberTools {
             return getCustomNumber(typeResult: .Float, type: Float.self, jsonObject: jsonObject, keyName: keyName)
         case .Double:
             return getCustomNumber(typeResult: .Double, type: Double.self, jsonObject: jsonObject, keyName: keyName)
-        }
-    }
-    
+        }*/
+    }*/
+    /*
     private func getCustomNumber<T>(typeResult: TypeResult, type: T.Type, jsonObject: [String: AnyObject], keyName: String) -> T {
         
         if let result = jsonObject[keyName] as? T {
@@ -225,6 +225,6 @@ extension NumberTools {
                 return Double(-1.0) as! T
             }
         }
-    }
+    }*/
 }
 
