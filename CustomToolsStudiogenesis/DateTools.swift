@@ -304,7 +304,7 @@ public class DateTools {
     }
     
     // MARK: GET DAYS NAME
-    /*
+    
     public func weekdayNameFrom(weekdayNumber: Int, shortedString: DayShortedString = .none, locale: Locale, capitalize: CapitalizeString) -> String {
         var calendar = Calendar.current
         calendar.locale = locale
@@ -328,7 +328,7 @@ public class DateTools {
         case .capitalized:
             return valueReturn.capitalized
         }
-    }*/
+    }
     
 }
 

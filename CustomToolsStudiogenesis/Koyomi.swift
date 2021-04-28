@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-/*
+
 // MARK: - KoyomiDelegate -
 @objc public protocol KoyomiDelegate: class {
     /**
@@ -598,4 +598,3 @@ extension Koyomi: UICollectionViewDataSource {
         return cell
     }
 }
-*/
