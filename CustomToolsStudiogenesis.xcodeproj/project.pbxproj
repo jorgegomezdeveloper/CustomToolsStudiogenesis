@@ -14,6 +14,9 @@
 		7C60002F2639A1FD001CF9D4 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60002E2639A1FD001CF9D4 /* DictionaryExtension.swift */; };
 		7C6000322639A24C001CF9D4 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000312639A24C001CF9D4 /* DateModel.swift */; };
 		7C6000352639A279001CF9D4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000342639A279001CF9D4 /* DateExtension.swift */; };
+		7C60003F2639A545001CF9D4 /* TextFieldContainerValuesTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60003E2639A545001CF9D4 /* TextFieldContainerValuesTool.swift */; };
+		7C6000442639A5B3001CF9D4 /* TextFieldTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000432639A5B3001CF9D4 /* TextFieldTools.swift */; };
+		7C6000492639A610001CF9D4 /* UrlTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6000482639A610001CF9D4 /* UrlTools.swift */; };
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
@@ -60,6 +63,9 @@
 		7C60002E2639A1FD001CF9D4 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		7C6000312639A24C001CF9D4 /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		7C6000342639A279001CF9D4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7C60003E2639A545001CF9D4 /* TextFieldContainerValuesTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerValuesTool.swift; sourceTree = "<group>"; };
+		7C6000432639A5B3001CF9D4 /* TextFieldTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTools.swift; sourceTree = "<group>"; };
+		7C6000482639A610001CF9D4 /* UrlTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlTools.swift; sourceTree = "<group>"; };
 		7C7DA21C263971990073A65D /* CustomToolsStudiogenesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomToolsStudiogenesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomToolsStudiogenesis.h; sourceTree = "<group>"; };
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,10 +176,13 @@
 				7CDC9CDF263993EA009C9218 /* StringTools.swift */,
 				7C60001F2639A093001CF9D4 /* SubStringsTools.swift */,
 				7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */,
+				7C60003E2639A545001CF9D4 /* TextFieldContainerValuesTool.swift */,
 				7C60001A26399FAD001CF9D4 /* TextFieldObservers.swift */,
+				7C6000432639A5B3001CF9D4 /* TextFieldTools.swift */,
 				7CDC9CE32639943B009C9218 /* ToastMessageTool.swift */,
 				7CDC9D0526399672009C9218 /* UIColorExtension.swift */,
 				7CDC9D0926399694009C9218 /* UIViewExtension.swift */,
+				7C6000482639A610001CF9D4 /* UrlTools.swift */,
 			);
 			path = CustomToolsStudiogenesis;
 			sourceTree = "<group>";
@@ -262,9 +271,11 @@
 				7C6000272639A173001CF9D4 /* KoyomiLayout.swift in Sources */,
 				7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */,
 				7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */,
+				7C6000442639A5B3001CF9D4 /* TextFieldTools.swift in Sources */,
 				7CDC9D0226399635009C9218 /* Koyomi.swift in Sources */,
 				7CDC9CFF26399601009C9218 /* CalendarKoyomiTool.swift in Sources */,
 				7CDC9CE8263994BF009C9218 /* ApiServiceTool.swift in Sources */,
+				7C6000492639A610001CF9D4 /* UrlTools.swift in Sources */,
 				7C60002F2639A1FD001CF9D4 /* DictionaryExtension.swift in Sources */,
 				7CDC9CD22639832A009C9218 /* PermissionTools.swift in Sources */,
 				7CDC9CA726397E8A009C9218 /* CellTools.swift in Sources */,
@@ -294,6 +305,7 @@
 				7CDC9CB626397F79009C9218 /* ImageAlertTool.swift in Sources */,
 				7CDC9CB326397F49009C9218 /* HtmlToStringFormatter.swift in Sources */,
 				7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */,
+				7C60003F2639A545001CF9D4 /* TextFieldContainerValuesTool.swift in Sources */,
 				7C60001B26399FAD001CF9D4 /* TextFieldObservers.swift in Sources */,
 				7CDC9CC726398286009C9218 /* MapTools.swift in Sources */,
 				7CDC9CBC26397FE7009C9218 /* InternetConnectionTool.swift in Sources */,
