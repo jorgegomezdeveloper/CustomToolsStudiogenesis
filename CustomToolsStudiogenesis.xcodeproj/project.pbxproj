@@ -28,6 +28,7 @@
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
 		7CB59EB3263BE6F2007542E6 /* SegueTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB59EB2263BE6F2007542E6 /* SegueTools.swift */; };
+		7CB59EC3263BF16B007542E6 /* SwiftNoticeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB59EC2263BF16B007542E6 /* SwiftNoticeTools.swift */; };
 		7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */; };
 		7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */; };
 		7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */; };
@@ -87,6 +88,7 @@
 		7C7DA2292639734B0073A65D /* AddressTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTools.swift; sourceTree = "<group>"; };
 		7C7DA22D263978200073A65D /* AlertCustomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomTool.swift; sourceTree = "<group>"; };
 		7CB59EB2263BE6F2007542E6 /* SegueTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTools.swift; sourceTree = "<group>"; };
+		7CB59EC2263BF16B007542E6 /* SwiftNoticeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNoticeTools.swift; sourceTree = "<group>"; };
 		7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNativeTools.swift; sourceTree = "<group>"; };
 		7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsCustom.swift; sourceTree = "<group>"; };
 		7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCustomTool.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				7CDC9CDC263993B3009C9218 /* SoundVibrationTools.swift */,
 				7CDC9CDF263993EA009C9218 /* StringTools.swift */,
 				7C60001F2639A093001CF9D4 /* SubStringsTools.swift */,
+				7CB59EC2263BF16B007542E6 /* SwiftNoticeTools.swift */,
 				7CDC9CBF2639817B009C9218 /* TableViewCellCustom.swift */,
 				7C60003E2639A545001CF9D4 /* TextFieldContainerValuesTool.swift */,
 				7C60001A26399FAD001CF9D4 /* TextFieldObservers.swift */,
@@ -311,6 +314,7 @@
 				7C60006B2639AD95001CF9D4 /* EmailTools.swift in Sources */,
 				7CDC9CAA26397EB1009C9218 /* ColorTools.swift in Sources */,
 				7CDC9CC42639824D009C9218 /* LocationTools.swift in Sources */,
+				7CB59EC3263BF16B007542E6 /* SwiftNoticeTools.swift in Sources */,
 				7CDC9CCA263982B8009C9218 /* NavigationTools.swift in Sources */,
 				7CDC9CB926397F9C009C9218 /* ImageTools.swift in Sources */,
 				7CDC9CDA2639938F009C9218 /* RandomTools.swift in Sources */,
