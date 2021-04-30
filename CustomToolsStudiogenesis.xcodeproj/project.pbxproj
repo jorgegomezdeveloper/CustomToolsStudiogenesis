@@ -27,6 +27,7 @@
 		7C7DA221263971990073A65D /* CustomToolsStudiogenesis.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7DA21F263971990073A65D /* CustomToolsStudiogenesis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA2292639734B0073A65D /* AddressTools.swift */; };
 		7C7DA22E263978200073A65D /* AlertCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DA22D263978200073A65D /* AlertCustomTool.swift */; };
+		7CB59EB3263BE6F2007542E6 /* SegueTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB59EB2263BE6F2007542E6 /* SegueTools.swift */; };
 		7CDC9C9A26397D8E009C9218 /* AlertNativeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */; };
 		7CDC9C9D26397DA2009C9218 /* AnimationsCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */; };
 		7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */; };
@@ -85,6 +86,7 @@
 		7C7DA220263971990073A65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C7DA2292639734B0073A65D /* AddressTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTools.swift; sourceTree = "<group>"; };
 		7C7DA22D263978200073A65D /* AlertCustomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCustomTool.swift; sourceTree = "<group>"; };
+		7CB59EB2263BE6F2007542E6 /* SegueTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTools.swift; sourceTree = "<group>"; };
 		7CDC9C9926397D8E009C9218 /* AlertNativeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNativeTools.swift; sourceTree = "<group>"; };
 		7CDC9C9C26397DA2009C9218 /* AnimationsCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsCustom.swift; sourceTree = "<group>"; };
 		7CDC9C9F26397DCA009C9218 /* AlertTableViewCustomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCustomTool.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				7C60007A2639B77C001CF9D4 /* PhoneTools.swift */,
 				7CDC9CD42639834A009C9218 /* QrTool.swift */,
 				7CDC9CD92639938F009C9218 /* RandomTools.swift */,
+				7CB59EB2263BE6F2007542E6 /* SegueTools.swift */,
 				7C2701BF2639BA2700DDE3F0 /* ShareTool.swift */,
 				7C60006D2639AE15001CF9D4 /* ScrollViewTools.swift */,
 				7CDC9CDC263993B3009C9218 /* SoundVibrationTools.swift */,
@@ -292,6 +295,7 @@
 				7C6000272639A173001CF9D4 /* KoyomiLayout.swift in Sources */,
 				7C7DA22A2639734B0073A65D /* AddressTools.swift in Sources */,
 				7CDC9CA026397DCA009C9218 /* AlertTableViewCustomTool.swift in Sources */,
+				7CB59EB3263BE6F2007542E6 /* SegueTools.swift in Sources */,
 				7C6000442639A5B3001CF9D4 /* TextFieldTools.swift in Sources */,
 				7CDC9D0226399635009C9218 /* Koyomi.swift in Sources */,
 				7CDC9CFF26399601009C9218 /* CalendarKoyomiTool.swift in Sources */,
